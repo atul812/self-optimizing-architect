@@ -1,0 +1,26 @@
+id: self_optimizing_architect
+namespace: hackathon.ai
+
+description: >
+  Self-optimizing architecture workflow demonstrating build and optimization steps.
+
+tasks:
+  - id: build
+    type: io.kestra.plugin.scripts.shell.Script
+    description: Build system architecture
+    timeout: PT30S
+    retry:
+      type: constant
+      interval: PT5S
+      maxAttempt: 3
+    commands:
+      - echo "Building architecture"
+
+  - id: optimize
+    type: io.kestra.plugin.scripts.shell.Commands
+    description: Optimize system after successful build
+    dependsOn:
+      - build
+    timeout: PT30S
+    commands:
+      - echo "Optimizing system"
