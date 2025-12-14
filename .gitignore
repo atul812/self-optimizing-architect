@@ -1,0 +1,19 @@
+# Kestra secrets (DO NOT COMMIT)
+kestra.env
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Python (if you add backend later)
+__pycache__/
+*.pyc
+
+# Node (if you add frontend later)
+node_modules/
