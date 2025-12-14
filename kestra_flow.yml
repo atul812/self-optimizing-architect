@@ -1,0 +1,13 @@
+id: self_optimizing_architect
+namespace: hackathon.ai
+
+tasks:
+  - id: build
+    type: io.kestra.core.tasks.scripts.Bash
+    commands:
+      - echo "Building architecture"
+
+  - id: optimize
+    type: io.kestra.core.tasks.scripts.Bash
+    commands:
+      - echo "Optimizing system"
